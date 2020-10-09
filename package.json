@@ -1,0 +1,16 @@
+{
+  "name": "mysticwolf-js-bot-commando",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SavSin (David Fountain)",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "discord.js-commando": "git+https://github.com/discordjs/Commando.git",
+    "sqlite": "^3.0.0"
+  }
+}
