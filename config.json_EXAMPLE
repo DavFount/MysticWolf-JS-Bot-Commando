@@ -1,0 +1,21 @@
+{
+    "token": "",
+    "twitch_token": "",
+    "twitch_secret": "",
+    "intro_channel": "Introductions Channel",
+    "default_role": "Basic 0 Access Role Name",
+    "user_role": "Main User role Name",
+    "rules_message": "Rules Message ID",
+    "rules_channel": "Rules Channel ID",
+    "twitch_channel": "Twitch Channel ID",
+    "twitch_users": [
+        {
+            "name": "user",
+            "id": 12125125
+        },
+        {
+            "name": "user",
+            "id": 123456
+        }
+    ]
+}
