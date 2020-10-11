@@ -6,10 +6,11 @@ const oneLine = require('common-tags').oneLine;
 const sqlite = require('sqlite');
 const { MessageReaction } = require('discord.js');
 const { PassThrough } = require('stream');
+const helpers = require('./helpers.js');
 const token = config.token;
 
 const client = new Commando.Client({
-    commandPrefix: '@',
+    commandPrefix: '$',
     owner: '271100045787529216',
     disableEveryone: true,
     unknownCommandResponse: false
@@ -30,6 +31,14 @@ client
         client.user.setActivity(`${client.users.cache.size} users in ${client.guilds.cache.size} guilds!`, {
             type: 'WATCHING',
         });
+
+        // Initiate Status of streamers
+        helpers.initiateStreamers();
+
+        // Create Timer to check twitch streams.
+        setInterval(() => {
+            helpers.checkTwitchStatus(client);
+        }, 60000);
     })
     .on('disconnect', () => { console.warn('Disconnected!'); })
     .on('commandError', (cmd, err) => {
